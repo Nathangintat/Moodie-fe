@@ -12,6 +12,7 @@ const axiosInstance = axios.create({
 })
 
 export function setupInterceptor() {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     const router = useRouter();
 
     axiosInstance.interceptors.request.use(
