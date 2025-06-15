@@ -66,7 +66,7 @@ const FormSignIn = () => {
             .then((response) => {
                 setCookie('accessToken', response.data.access_token)
                 router.push('/dashboard/review');
-            }).catch((error) => {
+            }).catch(() => {
                 setError(['Login error check your email and password.'])
                 return;
             });
