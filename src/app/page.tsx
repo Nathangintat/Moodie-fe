@@ -1,7 +1,5 @@
-import {router} from "next/client";
+import {redirect} from "next/navigation";
 
 export default function Home() {
-  return (
-      router.push("/login")
-  );
+    redirect("/login");
 }
