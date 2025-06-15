@@ -2,8 +2,13 @@
 
 import { UseFormRegister, FieldErrors } from 'react-hook-form';
 
+interface ReviewFormData {
+    headline: string;
+    description: string;
+}
+
 interface ReviewFormFieldsProps {
-    register: UseFormRegister<any>;
+    register: UseFormRegister<ReviewFormData>;
     errors: FieldErrors;
 }
 

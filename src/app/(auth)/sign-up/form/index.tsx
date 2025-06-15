@@ -5,7 +5,6 @@ import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import axiosInstance from "@/../lib/axios";
-import { setCookie } from "cookies-next";
 import {formSchema} from "@/../src/app/(auth)/sign-up/form/validation";
 
 const slides = [
@@ -51,14 +50,14 @@ const FormSignUp = () => {
         }
 
         try {
-            const response = await axiosInstance.post('/register', {
+            await axiosInstance.post('/register', {
                 username,
                 email,
                 password
             });
-
             alert("Registration successful! Please sign in.");
             router.push('/login');
+            // eslint-disable-next-line @typescript-eslint/no-unused-vars
         } catch (err) {
             setError(['Registration failed. Please check your input or try again later.']);
         }

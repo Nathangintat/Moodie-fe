@@ -5,14 +5,11 @@ import { useParams } from 'next/navigation';
 import axiosInstance from '@/../lib/axios';
 import { getCookie } from 'cookies-next';
 import { PlaylistItem } from '@/model/Playlist';
-
-const BASE_URL = process.env.NEXT_PUBLIC_API_ASSET;
-
 export default function PlaylistDetailPage() {
     const { id } = useParams();
     const [playlistItems, setPlaylistItems] = useState<PlaylistItem[]>([]);
     const [playlistName, setPlaylistName] = useState('');
-    const [playlistImage, setPlaylistImage] = useState('');
+    const [, setPlaylistImage] = useState('');
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {

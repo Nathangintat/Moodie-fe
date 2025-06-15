@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import ProfileHeader from './components/profileHeader';
-import UserStatCard from './components/userStatCard';
 import PlaylistTabs from './components/playlistTabs';
 import CreatePlaylist from './components/createPlaylist';
 import CreatePlaylistForm from './components/createPlaylistForm';
