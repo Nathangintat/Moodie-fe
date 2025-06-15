@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
     title: 'Moodie',
     icons: {
-        icon: '/favicon.ico',
+        icon: '/favicon-v2.ico',
     },
 };
 
