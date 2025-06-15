@@ -23,8 +23,12 @@ export default function ReviewListPage() {
                     headers: { Authorization: `Bearer ${token}` }
                 });
                 setReviews(response.data.data);
-            } catch (err: any) {
-                setError(err.message || "An error occurred");
+            } catch (err: unknown) {
+                if (err instanceof Error) {
+                    setError(err.message);
+                } else {
+                    setError("An unknown error occurred");
+                }
             } finally {
                 setLoading(false);
             }
