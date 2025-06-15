@@ -10,8 +10,8 @@ import ReviewForm from '@/../src/app/dashboard/(home)/review/components/reviewFo
 
 export default function ReviewListPage() {
     const [reviews, setReviews] = useState<Review[]>([]);
-    const [loading, setLoading] = useState<boolean>(true);
-    const [error, setError] = useState<string | null>(null);
+    const [, setLoading] = useState<boolean>(true);
+    const [, setError] = useState<string | null>(null);
     const [showForm, setShowForm] = useState(false); // <-- ini
 
     useEffect(() => {
