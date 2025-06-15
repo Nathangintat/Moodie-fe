@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import {Movie} from "@/model/Movie";
 import Link from "next/link";
 
